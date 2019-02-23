@@ -16,12 +16,22 @@ from PIL import Image
 import argparse
 from datetime import datetime
 import os
+import facebook as fb
+import json
+import os.path
+from os import path
 
 # ---------------------------------------------------------
 #                       GLOBAL VARIABLES
 # ---------------------------------------------------------
-fbapikey = ""
+configfile = "config.json"
+config = ""
+cfg = {
+    "page_id"      : "my_page_id",
+    "access_token" : "my_access_token"
+    }
 
+api = get_api(cfg)
 
 # ---------------------------------------------------------
 #                       CORE FUNCTIONS
@@ -53,6 +63,14 @@ def dir_path(path):
     else:
         #raise argparse.ArgumentTypeError(f"readable_dir:{path} is not a valid path")
         LogToConsole("Folder: " + args.inputfile + " is not a valid path")
+
+def CheckConfig():
+    if path.exists(configfile):
+        with open(configfile) as json_data_file:
+            config = json.load(json_data_file)
+    else:
+        defaultconfig = '{"page_id": "not_set", "access_token":"not_set"}'
+
 
 LogToConsole("Input: " + args.inputfile)
 dir_path(args.inputfile)
