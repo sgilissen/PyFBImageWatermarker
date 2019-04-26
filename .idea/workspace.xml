@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bd63563-e7dd-4a44-a8ca-23c698576a43" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="119" column="28" selection-start-line="119" selection-start-column="28" selection-end-line="119" selection-end-column="28" />
+            <state relative-caret-position="229">
+              <caret line="53" column="74" selection-start-line="53" selection-start-column="74" selection-end-line="53" selection-end-column="74" />
               <folding>
                 <element signature="e#503#524#0" expanded="true" />
               </folding>
@@ -34,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/config.json">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="265" selection-start-column="265" selection-end-column="265" />
+              <caret column="255" selection-start-column="255" selection-end-column="255" />
             </state>
           </provider>
         </entry>
@@ -74,15 +71,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="243" />
-    <option name="y" value="1107" />
+    <option name="y" value="27" />
     <option name="width" value="1356" />
     <option name="height" value="714" />
   </component>
@@ -186,12 +182,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550930442907</updated>
-      <workItem from="1556191342991" duration="9050000" />
+      <workItem from="1556191342991" duration="12604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9050000" />
+    <option name="totallyTimeSpent" value="12604000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -203,7 +199,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="243" y="1106" width="1366" height="716" extended-state="7" />
+    <frame x="0" y="26" width="1366" height="716" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18939394" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -218,9 +214,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293919" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3293919" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.17905405" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49924242" visible="true" weight="0.17905405" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.3293919" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007576" side_tool="true" weight="0.17905405" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -246,13 +242,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="265" selection-start-column="265" selection-end-column="265" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -260,10 +249,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="255" selection-start-column="255" selection-end-column="255" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="119" column="28" selection-start-line="119" selection-start-column="28" selection-end-line="119" selection-end-column="28" />
+        <state relative-caret-position="229">
+          <caret line="53" column="74" selection-start-line="53" selection-start-column="74" selection-end-line="53" selection-end-column="74" />
           <folding>
             <element signature="e#503#524#0" expanded="true" />
           </folding>

@@ -44,13 +44,14 @@ args = parser.parse_args()
 def main():
     log_to_console("Checking config...")
     if args.watermarkfile is not None:
+        log_to_console("Watermarking...")
         watermark_photo(args.inputfile, args.outputfile, args.watermarkfile, (0, 0))
     else:
         log_to_console("No watermark requested. Uploading to FB...")
 
 
     if check_config():
-        post_to_fb("Another test", workfile)
+        post_to_fb("Frienbeast ask who is the good boy. Am I the good boy?", workfile)
     else:
         log_to_console("Please check your config.")
 
@@ -69,10 +70,11 @@ def watermark_photo(input_path, output_path, watermark_path, position):
     transparent.paste(watermark, position, mask=watermark)
     fill_color = (255, 255, 255)
     if transparent.mode in ('RGBA', 'LA'):
+        log_to_console("Image is in RGBA (possibly a PNG). Adding white background to replace transparency.")
         background = Image.new(transparent.mode[:-1], transparent.size, fill_color)
         background.paste(transparent, transparent.split()[-1])
         transparent = background
-
+    log_to_console("Saving as jpg.")
     transparent.save(output_path)
     global workfile
     workfile = output_path
@@ -114,10 +116,13 @@ def check_config():
 
 
 def post_to_fb(message, image):
+    log_to_console("Posting to Facebook...")
     graph = fb.GraphAPI(access_token=page_access_token, version='2.8')
     # graph.put_object(page_id, connection_name='feed', message=message)
     photo = open(image, "rb")
     # graph.put_object(page_id, "photos", message="Watermarked doggo sez O HAI!", src=photo.read())
+    graph.put_photo(image=photo, message=message, album_path=page_id + "/photos")
+    log_to_console("Done!")
 
 
 if __name__ == "__main__":
