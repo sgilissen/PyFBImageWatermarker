@@ -20,11 +20,13 @@ import facebook as fb
 import json
 import os.path
 from os import path
+import random
 
 # ---------------------------------------------------------
 #                       GLOBAL VARIABLES
 # ---------------------------------------------------------
 configfile = "config.json"
+messagefile = "messages.txt"
 page_access_token = ''
 page_id = ''
 
@@ -47,11 +49,18 @@ def main():
         log_to_console("Watermarking...")
         watermark_photo(args.inputfile, args.outputfile, args.watermarkfile, (0, 0))
     else:
-        log_to_console("No watermark requested. Uploading to FB...")
+        log_to_console("No watermark requested.")
+        workfile = args.inputfile
 
 
     if check_config():
-        post_to_fb("Frienbeast ask who is the good boy. Am I the good boy?", workfile)
+        if path.exists(messagefile):
+            log_to_console("Message file {0} found! Choosing random line...".format(messagefile))
+            randomline = random.choice(list(open(messagefile)))
+        else:
+            log_to_console("Message file {0} not found. Proceeding without message...".format(messagefile))
+            randomline = ''
+        post_to_fb(randomline, workfile)
     else:
         log_to_console("Please check your config.")
 
